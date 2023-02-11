@@ -123,55 +123,30 @@ void
 
 public class Main {
     public static void main(String[] args) {
-        Car[] car = new Car[7];         /// массив для объекто класса Car
-//        Car.Key[] key = new Car.Key[7];  /// массив для объекто класса Car.Key - если бы класс Key был статическим
+        Car[] car = new Car[4];         /// массив для объекто класса Car
+        Bus[] bus = new Bus[4];         /// массив для объекто класса Bus
+        Truck[] truck = new Truck[4];         /// массив для объекто класса Truck
 
-        Bus[] bus = new Bus[3];         /// массив для объекто класса Bus
-
-        car[0] = new Car("Lada","Granta",1.7F,"желтый",2015,"Россия",
-                "manual", "sedan", "RTY1357908642", "5 человек+3 багажа", true, 180
-//                , new Car.Key(true , true)  // если бы класс Key был статическим можно создавать его объекты прямо в конструкторе внешн. класса
-        );
-        // если класс Key  НЕстатический - создаём его ВНЕ конструктора внешн.класса, т.к. сначала нужно создать объект внешн.класса , здесь - car[0]
-        // создаём объект класса Key в объекте класса Car
-        car[0].key = car[0].new Key(true,  false);
-
-        System.out.println(car[0]);
-        System.out.println(car[0].key);
-
-        car[1] = new Car("Audi","A8 50 L TDI quattro",3F,"чёрный",2020,"Германия",
-                "manual", "wagon", "RFV1354645642", "5 человек+3 багажа", true, 240
-        );
-
-        // создаём объект класса Key в объекте класса Car
-        car[1].key = car[1].new Key(true, true);
-
-        System.out.println(car[1]);
-        System.out.println(car[1].key);
-
-        car[2] = new Car("BMW","Z8",3F,"чёрный",2021,"Германия" ,
-                "automatic", "cabriolet", "WSX4564654542", "2 человек+2 багажа", true, 288
-        );
-        car[3] = new Car("KIA","Sportage",2.4F,"красный",2018,"Южная Корея" ,
-                "manual", "hatchback", "POI2349808642", "5 человек+3 багажа", true, 200
-        );
-        car[4] = new Car("Hyundai","Avante",1.6F,"оранжевый",2016,"Южная Корея",
-                "automatic", "sedan", "FDY1357908665", "", true, 180
-        );
-        car[5] = new Car("Hewlett Packard","ColorJet",0,"",1998,"США"  ,
-                "", "desktop", "FGDFGFDGFD642", "", false, 0
-        );
-        car[6] = new Car("Epson","FX - 900 ",0,"",1999,"",
-                "", "standalone", "R-----3242342", "", false, 3
-        );
+        car[0] = new Car("Lada","Granta",1.7F);
+        car[1] = new Car("Audi","A8 50 L TDI quattro",3F);
+        car[2] = new Car("BMW","Z8",3F);
+        car[3] = new Car("KIA","Sportage",2.4F);
 
         System.out.println(Arrays.toString(car));
 
-        bus[0] = new Bus("Ikarus","Sport","малиновый","Венгрия",120 );
-        bus[1] = new Bus("ЛАЗ","1970","Серый","СССР",70 );
-        bus[2] = new Bus("Mercedes","Classic6S","серебристый","Германия",230 );
+        bus[0] = new Bus("Ikarus","Sport",4.2F );
+        bus[1] = new Bus("ЛАЗ","1970",2.0F );
+        bus[2] = new Bus("Mercedes","Classic6S",6.6F );
+        bus[3] = new Bus("ГАЗ","Газель",2.2F );
 
         System.out.println(Arrays.toString(bus));
 
+
+        truck[0] = new Truck("MAN","Hero",7.2F );
+        truck[1] = new Truck("КРАЗ","К800",3.5F );
+        truck[2] = new Truck("Mercedes","Thunderbolt",6.6F );
+        truck[3] = new Truck("ГАЗ","66T",3.2F );
+
+        System.out.println(Arrays.toString(truck));
     }
 }

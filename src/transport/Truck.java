@@ -1,8 +1,7 @@
 package transport;
 
-public class Bus extends Transport implements Participant {
-
-    public Bus(String brand, String model, float engineVolume) {
+public class Truck extends Transport implements Participant{
+    public Truck(String brand, String model, float engineVolume) {
         super(brand, model, engineVolume);
     }
     public void pitStop() {
@@ -17,7 +16,7 @@ public class Bus extends Transport implements Participant {
 
     @Override
     public String toString() {
-        return "Автобус " +
+        return "Грузовик " +
                 getBrand() + ' '
                 + getModel()
                 + ": объём двигателя - " + getEngineVolume()

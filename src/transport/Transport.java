@@ -1,12 +1,12 @@
 package transport;
 
-public class Transport {
+public abstract class Transport  {
     private final String brand;
     private final String model;
     private float engineVolume; // объем двигателя
 
 
-    public Transport(String brand, String model, String color, String country, int maxSpeed
+    public Transport(String brand, String model, float engineVolume
 
     ) {
         this.brand = brand;
@@ -46,7 +46,8 @@ public class Transport {
         return "Транспортное средство " +
                 getBrand() + ' '
                 + getModel()
-                + ": объём двигателя - " + getEngineVolume() + "\n"
+                + ": объём двигателя - " + getEngineVolume()
+                + "\n"
         ;
     }
 }
