@@ -1,6 +1,7 @@
 package transport;
 
 public abstract class Transport  {
+    public final String transportClass = "Транспортное средство";
     private final String brand;
     private final String model;
     private float engineVolume; // объем двигателя
@@ -43,8 +44,8 @@ public abstract class Transport  {
 
     @Override
     public String toString() {
-        return "Транспортное средство " +
-                getBrand() + ' '
+        return this.transportClass + " "
+                + getBrand() + ' '
                 + getModel()
                 + ": объём двигателя - " + getEngineVolume()
                 + "\n"

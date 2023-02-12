@@ -1,4 +1,3 @@
-
 import transport.*;
 
 import java.util.Arrays;
@@ -147,6 +146,26 @@ public class Main {
         truck[2] = new Truck("Mercedes","Thunderbolt",6.6F );
         truck[3] = new Truck("ГАЗ","66T",3.2F );
 
+        // Задание 1
         System.out.println(Arrays.toString(truck));
+        // Задание 3
+        //      phase2(car);
+                truck[3].bestTimeLap();
+
+        // Задание 4
+        Driver[] driver = new Driver[4];         /// массив для объекто класса Driver
+        driver[0] = new Driver("Jim Carrey", 'B', 13);
+        driver[1] = new Driver("Down Time", 'A', 7);
+        driver[2] = new Driver("Запеканкин Сигизмунд Стоеровович", 'С', 22);
+        driver[3] = new Driver("Труффальдино Из Бергамо", 'D', 33);
+
     }
+
+//    public static void phase2(Transport transport) {
+//        for (Transport icar : transport) {
+//            icar.bestTimeLap();
+//
+//        }
+//    }
+
 }
