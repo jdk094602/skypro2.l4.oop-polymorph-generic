@@ -1,9 +1,14 @@
 package transport;
 
-public class Truck extends Transport implements Participant{
+public class Truck<T extends Driver> extends Transport implements Participant{
     public final String transportClass = "Грузовик";
-    public Truck(String brand, String model, float engineVolume) {
-        super(brand, model, engineVolume);
+    public char trueCategory = 'C';
+
+    public Truck(String brand, String model, float engineVolume, T driver ) {
+        super(brand, model, engineVolume,driver);
+    }
+    public char getTrueCategory() {
+        return trueCategory;
     }
     public void pitStop() {
         System.out.println(this + "заехал на пит-стоп");
@@ -24,6 +29,7 @@ public class Truck extends Transport implements Participant{
                 + "\n"
                 ;
     }
+
 
 }
 

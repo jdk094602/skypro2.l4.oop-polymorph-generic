@@ -10,7 +10,6 @@ public class DriverCatB extends Driver {
         }
     }
 
-
     @Override
     public String toString() {
         return "Водитель {"
