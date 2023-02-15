@@ -34,4 +34,14 @@ public class Driver {
     public void setExperience(int experience) {
         this.experience = experience;
     }
+
+    @Override
+    public String toString() {
+        return "Водитель {"
+                + fio
+                + ": категория =" + category
+                + ", cтаж =" + experience
+                + '}'
+                ;
+    }
 }

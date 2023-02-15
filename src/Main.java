@@ -122,46 +122,59 @@ void
 
 public class Main {
     public static void main(String[] args) {
-        Car[] car = new Car[4];         /// массив для объекто класса Car
-        Bus[] bus = new Bus[4];         /// массив для объекто класса Bus
-        Truck[] truck = new Truck[4];         /// массив для объекто класса Truck
 
-        car[0] = new Car("Lada","Granta",1.7F);
-        car[1] = new Car("Audi","A8 50 L TDI quattro",3F);
-        car[2] = new Car("BMW","Z8",3F);
-        car[3] = new Car("KIA","Sportage",2.4F);
+        // Задание 1
+
+        Car<DriverCatB>[] car = new Car[4];         /// массив для объекто класса Car
+        Bus<DriverCatD>[] bus = new Bus[4];         /// массив для объекто класса Bus
+        Truck<DriverCatC>[] truck = new Truck[4];         /// массив для объекто класса Truck
+
+        Driver emptyDriver = null;
+        // Driver[] driver = new Driver[4];         /// массив для объекто класса Driver
+        DriverCatB driver0 = new DriverCatB("Jim Carrey", 'B', 13);
+        DriverCatA driver1 = new DriverCatA("Down Time", 'A', 7);
+        DriverCatC driver2 = new DriverCatC("Запеканкин Сигизмунд Стоеросович", 'С', 22);
+        DriverCatD driver3 = new DriverCatD("Труффальдино Из Бергамо", 'D', 33);
+
+
+        car[0] = new Car("Lada","Granta",1.7F, emptyDriver);
+        car[1] = new Car("Audi","A8 50 L TDI quattro",3F,driver0);
+        car[2] = new Car("BMW","Z8",3F,emptyDriver);
+        car[3] = new Car("KIA","Sportage",2.4F,emptyDriver);
 
         System.out.println(Arrays.toString(car));
 
-        bus[0] = new Bus("Ikarus","Sport",4.2F );
-        bus[1] = new Bus("ЛАЗ","1970",2.0F );
-        bus[2] = new Bus("Mercedes","Classic6S",6.6F );
-        bus[3] = new Bus("ГАЗ","Газель",2.2F );
+        bus[0] = new Bus("Ikarus","Sport",4.2F, driver1 );
+        bus[1] = new Bus("ЛАЗ","1970",2.0F,emptyDriver );
+        bus[2] = new Bus("Mercedes","Classic6S",6.6F,emptyDriver );
+        bus[3] = new Bus("ГАЗ","Газель",2.2F,driver3 );
 
         System.out.println(Arrays.toString(bus));
 
 
-        truck[0] = new Truck("MAN","Hero",7.2F );
-        truck[1] = new Truck("КРАЗ","К800",3.5F );
-        truck[2] = new Truck("Mercedes","Thunderbolt",6.6F );
-        truck[3] = new Truck("ГАЗ","66T",3.2F );
+        truck[0] = new Truck("MAN","Hero",7.2F,emptyDriver );
+        truck[1] = new Truck("КРАЗ","К800",3.5F,emptyDriver );
+        truck[2] = new Truck("Mercedes","Thunderbolt",6.6F,driver2  );
+        truck[3] = new Truck("ГАЗ","66T",3.2F,emptyDriver );
 
-        // Задание 1
         System.out.println(Arrays.toString(truck));
+
         // Задание 3
+
+
         //      phase2(car);
                 truck[3].bestTimeLap();
 
         // Задание 4
-        Driver[] driver = new Driver[4];         /// массив для объекто класса Driver
-        driver[0] = new Driver("Jim Carrey", 'B', 13);
-        driver[1] = new Driver("Down Time", 'A', 7);
-        driver[2] = new Driver("Запеканкин Сигизмунд Стоеровович", 'С', 22);
-        driver[3] = new Driver("Труффальдино Из Бергамо", 'D', 33);
+
+        System.out.println((driver0);
+        System.out.println((driver1);
+        System.out.println((driver2);
+        System.out.println((driver3);
 
     }
 
-//    public static void phase2(Transport transport) {
+//    public static void phase2(<? extent Transport> transport) {
 //        for (Transport icar : transport) {
 //            icar.bestTimeLap();
 //

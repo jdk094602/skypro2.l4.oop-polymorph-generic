@@ -1,9 +1,9 @@
 package transport;
 
-public class Car extends Transport implements Participant {
+public class Car<T extends Driver> extends Transport implements Participant {
     public final String transportClass = "Автомобиль";
-    public Car(String brand, String model, float engineVolume) {
-        super(brand, model, engineVolume);
+    public Car(String brand, String model, float engineVolume, Driver driver) {
+        super(brand, model, engineVolume, driver);
     }
     public void pitStop() {
         System.out.println(this + "заехал на пит-стоп");
